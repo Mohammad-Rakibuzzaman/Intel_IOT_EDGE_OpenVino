@@ -1,0 +1,21 @@
+download anaconda 3.7
+- cd Downloads
+- bash Anaconda3-5.3.0-Linux-x86_64.sh
+- follow intructions
+
+anaconda-navigator
+- create environemnt with 3.6
+pip install --upgrade pip
+pip install tensorflow
+pip install keras
+conda install scikit-learn
+pip install PIL
+conda install -c conda-forge opencv
+python -m pip install -U matplotlib
+pip install pandas
+pip install tqdm
+pip install pydot
+pip install scikit-image
+ip install graphviz
+https://packages.ubuntu.com/search?keywords=graphviz&searchon=names
+go to anaconda navigator and change environment to deeplearning and install jupyter

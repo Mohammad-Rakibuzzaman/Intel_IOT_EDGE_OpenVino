@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+    ui:
+        build: ./ui
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./ui:/app
+            - ./app/node_modules
+        stdin_open: true
+        tty: true
+
+    server:
+        build: ./server
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/app
+        depends_on:
+            - db
+    db:
+        image: db
+        volumes:
+            - ./db:./db/data.db
+        ports:
+            - '1884:1884'
+
+
